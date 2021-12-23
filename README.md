@@ -49,7 +49,7 @@ Sometimes your bot may run idle. In that case you will need some sort of schedul
     
     - add heroku scheduler to your Dino. This is in the resources tab on Heroku.
     - Run this command to generate your Heroku auth token: heroku authorizations:create
-    - Add this curl command to your Heroku Scheduler: curl --location --request DELETE 'https://api.heroku.com/apps/$YOUR_DINO_Name/dynos' \ --header 'Content-Type: application/json' \ --header 'Accept: application/vnd.heroku+json; version=3' \ --header 'Authorization: Bearer {token}'
+    - Add this curl command to your Heroku Scheduler: curl -n -X DELETE https://api.heroku.com/apps/$Your_Dino_name/dynos -H "Accept: application/vnd.heroku+json; version=3" \n -H "Content-Type: application/json" \n -H "Authorization: Bearer {token}"'
 
 
 
